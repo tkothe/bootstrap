@@ -222,21 +222,10 @@
       <h3 style="text-align: center;">{{buildErrorText}}</h3>
     </div>
     <div ng-hide="buildErrorText">
-<<<<<<< HEAD
       <label>Select the modules you wish to download:</label>
       <% modules.forEach(function(module) { %>
         <button type="button" class="btn" ng-class="{'btn-primary': module.<%= module.name %>}" style="width: 170px; margin-bottom: 3px;" ng-model="module.<%= module.name %>" btn-checkbox ng-change="selectedChanged('<%= module.name %>', module.<%= module.name %>)"><%= module.displayName %></button>
       <% }); %>
-=======
-      <label>Select the modules you wish to download:
-      <select style="width: 100%;" ui-select2 multiple
-        ui-options="{multiple: true}"
-        ng-model="selectedModules">
-        <% modules.forEach(function(module) { %>
-          <option value="<%= module.name %>"><%= module.displayName %></option>
-        <% }); %>
-      </select></label>
->>>>>>> demo(all): upgrade project to bs3.0.0-rc2 and get docs looking spiffy
     </div>
   </div>
   <div class="modal-footer">
